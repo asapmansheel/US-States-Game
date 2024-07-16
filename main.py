@@ -41,11 +41,11 @@ while continue_game:
         print('Good job!')
         continue_game = False
        
-states_to_learn = []
+states_to_learn = [n for n in states_list if n not in guessed_states ] # Day 26: List Comprehensions
 
-for state in states_list:
-    if state not in guessed_states:
-        states_to_learn.append(state)
+#for state in states_list:
+    #if state not in guessed_states:
+        #states_to_learn.append(state)
         
 data_dict = {
     'state': states_to_learn
